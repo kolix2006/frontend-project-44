@@ -1,6 +1,10 @@
 import readlineSync from 'readline-sync'
 import { sayHello } from '../src/cli.js'
 
+const randomizer = (num) => {
+  return (Math.floor(Math.random() * num))
+}
+
 const source = (problems, correctAnswers, description) => {
   let isWinner = true
   const userName = sayHello()
@@ -23,4 +27,4 @@ const source = (problems, correctAnswers, description) => {
   }
 }
 
-export { source }
+export { randomizer, source }

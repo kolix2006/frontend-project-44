@@ -1,12 +1,8 @@
 #!/usr/bin/env node
 
-import { source } from '../src/index.js'
+import { randomizer, source } from '../src/index.js'
 
 const desc = 'What is the result of the expression?'
-
-const randomizer = (num) => {
-  return (Math.floor(Math.random() * num))
-}
 
 const makeProblem = (num1, operator, num2) => {
   return `${num1} ${operator} ${num2}`
