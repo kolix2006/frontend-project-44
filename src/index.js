@@ -2,7 +2,7 @@ import readlineSync from 'readline-sync'
 import { sayHello } from '../src/cli.js'
 
 const randomizer = (num) => {
-  return (Math.floor(Math.random() * num))
+  return (Math.floor((Math.random() * num) + 1))
 }
 
 const source = (problems, correctAnswers, description) => {
