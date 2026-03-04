@@ -22,9 +22,9 @@ const gcdBySplit = (str) => {
 }
 
 const randomPairs = [
-  makePairOfNums((randomizer(50)), (randomizer(50))),
-  makePairOfNums((randomizer(70)), (randomizer(70))),
-  makePairOfNums((randomizer(100)), (randomizer(100))),
+  makePairOfNums((randomizer(1, 50)), (randomizer(1, 50))),
+  makePairOfNums((randomizer(20, 70)), (randomizer(20, 70))),
+  makePairOfNums((randomizer(20, 100)), (randomizer(20, 100))),
 ]
 const correctAnswers = [gcdBySplit(randomPairs[0]), gcdBySplit(randomPairs[1]), gcdBySplit(randomPairs[2])]
 

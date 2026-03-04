@@ -1,8 +1,13 @@
 import readlineSync from 'readline-sync'
 import { sayHello } from '../src/cli.js'
 
-const randomizer = (num) => {
-  return (Math.floor((Math.random() * num) + 1))
+const randomizer = (min, max) => {
+  const array = new Uint32Array(1)
+  crypto.getRandomValues(array)
+
+  const random = array[0] / (0xffffffff + 1)
+
+  return Math.floor(random * (max - min + 1)) + min
 }
 
 const source = (problems, correctAnswers, description) => {

@@ -22,9 +22,9 @@ const solveBySplit = (problem) => {
 
 const operations = ['+', '-', '*']
 const problems = [
-  makeProblem(randomizer(20), operations[randomizer(3) - 1], randomizer(20)),
-  makeProblem(randomizer(50), operations[randomizer(3) - 1], randomizer(50)),
-  makeProblem(randomizer(100), operations[randomizer(3) - 1], randomizer(100)),
+  makeProblem(randomizer(1, 20), operations[randomizer(0, 2)], randomizer(1, 20)),
+  makeProblem(randomizer(10, 50), operations[randomizer(0, 2)], randomizer(10, 50)),
+  makeProblem(randomizer(50, 100), operations[randomizer(0, 2)], randomizer(50, 100)),
 ]
 const correctAnswers = [solveBySplit(problems[0]), solveBySplit(problems[1]), solveBySplit(problems[2])]
 

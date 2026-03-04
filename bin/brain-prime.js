@@ -14,7 +14,7 @@ const isPrime = (num) => {
   return (divsCounter === 2) ? 'yes' : 'no'
 }
 
-const randomNums = [randomizer(100), randomizer(120), randomizer(150)]
+const randomNums = [randomizer(1, 50), randomizer(30, 100), randomizer(50, 150)]
 const correctAnswers = [isPrime(randomNums[0]), isPrime(randomNums[1]), isPrime(randomNums[2])]
 
 const primeOrNot = (randomNums, correctAnswers, description) => {

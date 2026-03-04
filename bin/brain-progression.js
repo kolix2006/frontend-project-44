@@ -5,16 +5,16 @@ import { randomizer, source } from '../src/index.js'
 const desc = 'What number is missing in the progression?'
 
 const generateProgression = (progressionLength) => {
-  const progression = [randomizer(50)]
+  const progression = [randomizer(1, 50)]
   const start = progression[0]
-  const gap = randomizer(4)
+  const gap = randomizer(1, 4)
 
   for (let i = 1; i <= progressionLength; i++) {
     let currentElement = start + i * gap
     progression.push(currentElement)
   }
 
-  progression[randomizer(progression.length) - 1] = '..'
+  progression[randomizer(0, progression.length)] = '..'
   const strProgression = progression.join(' ')
   return strProgression
 }
@@ -41,9 +41,9 @@ const findBySplit = (progression) => {
 }
 
 const progressions = [
-  generateProgression(randomizer(7) + 4),
-  generateProgression(randomizer(8) + 5),
-  generateProgression(randomizer(9) + 6),
+  generateProgression(randomizer(5, 7)),
+  generateProgression(randomizer(5, 10)),
+  generateProgression(randomizer(5, 12)),
 ]
 const correctAnswers = [findBySplit(progressions[0]), findBySplit(progressions[1]), findBySplit(progressions[2])]
 

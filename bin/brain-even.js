@@ -8,7 +8,7 @@ const isEven = (num) => {
   return (num % 2 === 0) ? 'yes' : 'no'
 }
 
-const randomNums = [randomizer(100), randomizer(120), randomizer(150)]
+const randomNums = [randomizer(1, 50), randomizer(20, 100), randomizer(50, 150)]
 const correctAnswers = [isEven(randomNums[0]), isEven(randomNums[1]), isEven(randomNums[2])]
 
 const evenOrNot = (randomNums, correctAnswers, description) => {
